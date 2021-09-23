@@ -33,7 +33,9 @@ a {
   color: #ffffff; }
 
 body {
-  color: #ffffff; }
+  color: #ffffff;
+  font-size: 16px;
+  font-family: HelveticaNeueCyr-Medium; }
 
 .header_promo._active {
   transform: translate(0px, 0px);
@@ -44,6 +46,14 @@ body {
   opacity: 1; }
 
 .black._active {
+  transform: translate(0px, 0px);
+  opacity: 1; }
+
+.share_info._active {
+  transform: translate(0px, 0px);
+  opacity: 1; }
+
+.grow_promo._active {
   transform: translate(0px, 0px);
   opacity: 1; }
 
@@ -184,6 +194,10 @@ body {
     margin-top: 164px;
     margin-bottom: 91px;
     max-width: 380px; }
+  .share_info {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 1.5s ease 0s; }
   .share_title {
     font-size: 24px;
     line-height: 32px;
@@ -204,14 +218,27 @@ body {
     font-weight: 400;
     color: #000000;
     margin-top: 15px; }
+  .share_img1 {
+    z-index: 0;
+    margin-top: 170px;
+    margin-left: -105px; }
+  .share_img2 {
+    margin-top: -685px;
+    margin-left: 80px;
+    z-index: 32; }
 
+.grow_promo {
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 1.5s ease 0.2s; }
 .grow_title {
   font-size: 24px;
   line-height: 32px;
   font-weight: 800;
   color: #3cd072;
   margin-left: 75px;
-  margin-top: 60px; }
+  margin-top: 60px;
+  position: relative; }
   .grow_title::after {
     content: url("../img/icons/grow.png");
     width: 50px;
@@ -219,15 +246,5 @@ body {
     position: absolute;
     left: -81px;
     top: -15px; }
-
-.share_img1 {
-  z-index: 0;
-  margin-top: 130px;
-  margin-left: -105px; }
-
-.share_img2 {
-  margin-top: -675px;
-  margin-left: 80px;
-  z-index: 32; }
 
 /*# sourceMappingURL=style.css.map */
