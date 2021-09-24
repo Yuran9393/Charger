@@ -37,3 +37,21 @@ if (animItems.length > 0) {
 	}, 300);
 }
 /////////////////////////////////////
+
+//SLider//
+var swiper = new Swiper(".mySwiper", {
+	slidesPerView: 9,
+	spaceBetween: 30,
+	slidesPerGroup: 1,
+	loop: true,
+	loopFillGroupWithBlank: true,
+	pagination: {
+	  el: ".swiper-pagination",
+	  clickable: true,
+	},   
+	autoplay: {
+		delay: 2000,
+		disableOnInteraction: false,
+	  },
+  });
+  ////////////////////////////////////
