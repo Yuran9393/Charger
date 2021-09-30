@@ -70,7 +70,43 @@ var swiper = new Swiper(".mySwiper", {
   });
 
 //////////////////////////////////////////////
+let headerBtn = document.querySelector('.email_btn');
+	headerBtn.addEventListener('mouseover', ()=>{
+		headerBtn.style.backgroundColor = '#1a6981'
+		headerBtn.style.transition =' all 0.5s ease 0s'
+	})
+	headerBtn.addEventListener('mouseout', ()=>{
+		headerBtn.style.backgroundColor = '#fff'
+  })
 
+let submitBtn = document.querySelector('.greenbg');
+submitBtn.addEventListener('mouseover', ()=>{
+	submitBtn.style.backgroundColor = '#1a6981'
+	submitBtn.style.transition =' all 0.5s ease 0s'
+  })
+  submitBtn.addEventListener('mouseout', ()=>{
+	submitBtn.style.backgroundColor = '#3bd071'
+}) 
+
+let blackBtns = document.querySelectorAll('.blackbtn')
+  console.log(blackBtns)
+  blackBtns.forEach(item =>{
+	 		item.addEventListener('mouseover', ()=>{
+	 		  item.style.backgroundColor = '#1a6981'
+			   item.style.transition =' all 0.5s ease 0s'
+	 	  })
+		   item.addEventListener('mouseout', ()=>{
+			item.style.backgroundColor = '#000'
+	   })
+	 
+  })
+
+
+// 	  btns.forEach(item =>{
+// 		item.addEventListener('mouseover', ()=>{
+// 		  item.style.backgroundColor = '#1a6981'
+// 	  })
+//   })
 
 
 
