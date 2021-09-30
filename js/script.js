@@ -44,6 +44,7 @@ var swiper = new Swiper(".mySwiper", {
 	spaceBetween: 30,
 	slidesPerGroup: 1,
 	loop: true,
+	freeMode: true,
 	loopFillGroupWithBlank: true,
 	pagination: {
 	  el: ".swiper-pagination",
@@ -55,3 +56,30 @@ var swiper = new Swiper(".mySwiper", {
 	  },
   });
   ////////////////////////////////////
+  var swiper = new Swiper(".mySwiper2", {
+	slidesPerView: 5,
+	spaceBetween: 30,
+	freeMode: true,
+	pagination: {
+	  el: ".swiper-pagination",
+	  clickable: true,
+	},	autoplay: {
+		delay: 2000,
+		disableOnInteraction: false,
+	  },
+  });
+
+//////////////////////////////////////////////
+
+
+
+
+// const count = document.querySelectorAll('.counter');
+//   	count.forEach(item => {
+// 		  item.textContent = '0'
+// 		  for(let i = 0; i < 100; i++){
+// 			item.textContent = i
+// 		  }
+// 	  })
+
+	
