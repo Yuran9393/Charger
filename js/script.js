@@ -1,5 +1,5 @@
 
-// АНимация
+// Scroll animation
 const animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {
@@ -36,9 +36,7 @@ if (animItems.length > 0) {
 		animOnScroll();
 	}, 300);
 }
-/////////////////////////////////////
-
-//SLider//
+//SLider#1//
 var swiper = new Swiper(".mySwiper", {
 	slidesPerView: 9,
 	spaceBetween: 30,
@@ -55,7 +53,7 @@ var swiper = new Swiper(".mySwiper", {
 		disableOnInteraction: false,
 	  },
   });
-  ////////////////////////////////////
+  //Slider#2//
   var swiper = new Swiper(".mySwiper2", {
 	slidesPerView: 5,
 	spaceBetween: 30,
@@ -69,7 +67,7 @@ var swiper = new Swiper(".mySwiper", {
 	  },
   });
 
-//////////////////////////////////////////////
+//Button hover
 let headerBtn = document.querySelector('.email_btn');
 	headerBtn.addEventListener('mouseover', ()=>{
 		headerBtn.style.backgroundColor = '#1a6981'
@@ -89,7 +87,6 @@ submitBtn.addEventListener('mouseover', ()=>{
 }) 
 
 let blackBtns = document.querySelectorAll('.blackbtn')
-  console.log(blackBtns)
   blackBtns.forEach(item =>{
 	 		item.addEventListener('mouseover', ()=>{
 	 		  item.style.backgroundColor = '#1a6981'
@@ -100,7 +97,35 @@ let blackBtns = document.querySelectorAll('.blackbtn')
 	   })
 	 
   })
+//Count//
+const time = 5000;
+const step = 150;
 
+function outNum(num){
+	let count1 = document.querySelector('#count1' );
+	let count2 = document.querySelector('#count2' );
+	let count3 = document.querySelector('#count3' );
+	let count4 = document.querySelector('#count4' );
+	let count5 = document.querySelector('#count5' );
+	n = 0;
+	let t = Math.round(time / (num / step));
+	let interval = setInterval(() => {
+		n = n + step;
+		if(n == num){
+			clearInterval(interval);
+		}
+		count1.innerHTML =  n;
+		count2.innerHTML = n - 20000
+		count3.innerHTML = n - 45000
+		count4.innerHTML = n - 70000
+		count5.innerHTML = n - 77000
+
+	},
+	
+	t);
+	
+}
+outNum(150000);
 
 // 	  btns.forEach(item =>{
 // 		item.addEventListener('mouseover', ()=>{
