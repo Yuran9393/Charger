@@ -201,11 +201,12 @@ input
 	transform: translate(40%,0px)
 	opacity: 0
 	transition: all 1.5s ease 0.5s
-@media (max-width: 768px) 
+@media (max-width: 768px)
 	.black
 		display: none
 	.white
 		display: none
+
 .share
 	max-height: 624px
 	background-color: #f0f0f0
@@ -545,6 +546,11 @@ input
 		color: #3cd072
 		font-size: 16px
 
+
+@media (max-width: 768px) 
+	.submit
+		&_input
+			width: 498px
 @media (max-width: 375px) 
 	.submit
 		height: 250px
@@ -554,7 +560,7 @@ input
 			width: 100%
 			margin-top: 10px
 		&_input
-			width: 100%
+			width: 370px
 		&_title
 			margin-top: 25px
 .gifts
@@ -637,16 +643,11 @@ input
 		height: 2px
 		background-color: #adadad
 		margin-top: 17px
-		// opacity: 0
-		// transition: all 2s ease 1s
-		// transform: translate(0,-100%)
 	&_promo
 		margin-top: 24px
 		display: flex
 		align-items: center
 		justify-content: space-between
-		// opacity: 0
-		// transition: all 2s ease 0.6s
 	&_name
 		font-size: 36px
 		font-weight: 400

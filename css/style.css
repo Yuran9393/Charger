@@ -581,6 +581,9 @@ input {
     color: #3cd072;
     font-size: 16px; }
 
+@media (max-width: 768px) {
+  .submit_input {
+    width: 498px; } }
 @media (max-width: 375px) {
   .submit {
     height: 250px; }
@@ -590,7 +593,7 @@ input {
       width: 100%;
       margin-top: 10px; }
     .submit_input {
-      width: 100%; }
+      width: 370px; }
     .submit_title {
       margin-top: 25px; } }
 .gifts {

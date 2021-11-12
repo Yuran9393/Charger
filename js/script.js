@@ -1,3 +1,4 @@
+'use strict';
 
 // Scroll animation
 const animItems = document.querySelectorAll('._anim-items');
@@ -29,7 +30,7 @@ if (animItems.length > 0) {
 		const rect = el.getBoundingClientRect(),
 			scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
 			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-		return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+		return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
 	}
 
 	setTimeout(() => {
@@ -55,7 +56,7 @@ var swiper = new Swiper(".mySwiper", {
   });
   //Slider#2//
   var swiper = new Swiper(".mySwiper2", {
-	slidesPerView: 5,
+	slidesPerView: 4,
 	spaceBetween: 30,
 	freeMode: true,
 	pagination: {
@@ -70,33 +71,33 @@ var swiper = new Swiper(".mySwiper", {
 //Button hover
 let headerBtn = document.querySelector('.email_btn');
 	headerBtn.addEventListener('mouseover', ()=>{
-		headerBtn.style.backgroundColor = '#1a6981'
-		headerBtn.style.transition =' all 0.5s ease 0s'
-	})
+		headerBtn.style.backgroundColor = '#1a6981';
+		headerBtn.style.transition =' all 0.5s ease 0s';
+	});
 	headerBtn.addEventListener('mouseout', ()=>{
-		headerBtn.style.backgroundColor = '#fff'
-  })
+		headerBtn.style.backgroundColor = '#fff';
+  });
 
 let submitBtn = document.querySelector('.greenbg');
 submitBtn.addEventListener('mouseover', ()=>{
-	submitBtn.style.backgroundColor = '#1a6981'
-	submitBtn.style.transition =' all 0.5s ease 0s'
-  })
+	submitBtn.style.backgroundColor = '#1a6981';
+	submitBtn.style.transition =' all 0.5s ease 0s';
+  });
   submitBtn.addEventListener('mouseout', ()=>{
-	submitBtn.style.backgroundColor = '#3bd071'
-}) 
+	submitBtn.style.backgroundColor = '#3bd071';
+}); 
 
-let blackBtns = document.querySelectorAll('.blackbtn')
+let blackBtns = document.querySelectorAll('.blackbtn');
   blackBtns.forEach(function(item){
 	 		item.addEventListener('mouseover', ()=>{
-	 		  item.style.backgroundColor = '#1a6981'
-			   item.style.transition =' all 0.5s ease 0s'
-	 	  })
+	 		  item.style.backgroundColor = '#1a6981';
+			   item.style.transition =' all 0.5s ease 0s';
+	 	  });
 		   item.addEventListener('mouseout', ()=>{
-			item.style.backgroundColor = '#000'
-	   })
+			item.style.backgroundColor = '#000';
+	   });
 	 
-  })
+  });
 //Count//
 const time = 5000;
 const step = 150;
@@ -107,18 +108,18 @@ function outNum(num){
 	let count3 = document.querySelector('#count3' );
 	let count4 = document.querySelector('#count4' );
 	let count5 = document.querySelector('#count5' );
-	n = 0;
+	let n = 0;
 	let t = Math.round(time / (num / step));
 	let interval = setInterval(() => {
 		n = n + step;
-		if(n == num){
+		if(n === num){
 			clearInterval(interval);
 		}
 		count1.innerHTML =  n;
-		count2.innerHTML = n - 20000
-		count3.innerHTML = n - 45000
-		count4.innerHTML = n - 70000
-		count5.innerHTML = n - 77000
+		count2.innerHTML = n - 20000;
+		count3.innerHTML = n - 45000;
+		count4.innerHTML = n - 70000;
+		count5.innerHTML = n - 77000;
 
 	},
 	t);
@@ -128,45 +129,28 @@ outNum(150000);
 let emailBtn = document.querySelector('.email_btn');
 let headerInput = document.querySelector('.header_input');
 let clickBtn = function(){emailBtn.addEventListener('click', ()=>{
-	if(headerInput.value == ''){
-		headerInput.style.border = '3px solid red'
+	if(headerInput.value === ''){
+		headerInput.style.border = '3px solid red';
 		
 	} else {
-		headerInput.style.border = '2px solid #fff'
+		headerInput.style.border = '2px solid #fff';
 	}
-	})
-}
+	});
+};
 clickBtn();
 
 let subBtns = document.querySelectorAll('.submit_btn');
-let subInputs = document.querySelectorAll('.submit_input')
+let subInputs = document.querySelectorAll('.submit_input');
 subBtns.forEach(function(itembtn){
-	console.log(itembtn)
 	itembtn.addEventListener('click',()=>{
 		subInputs.forEach(function(itemInputs) {
-			if(itemInputs.value == ''){
-				itemInputs.style.border = '3px solid red'
+			if(itemInputs.value === ''){
+				itemInputs.style.border = '3px solid red';
 			} else {
-				itemInputs.style.border = '2px solid #fff'
+				itemInputs.style.border = '2px solid #fff';
 			}
-		})
-	})
-})
+		});
+	});
+});
 
 
-
-// let submitBtns = document.querySelectorAll('.submit_btn');
-// let submitInput = document.querySelectorAll('.submit_input');
-// let clickBtn23 = function(){submitBtns.forEach((item, () =>{
-// 	item.addEventListener('click', ()=>{
-// 		submitInput.forEach((sitem=>{
-// 			if(item.value == ''){
-// 				sitem.style.border = '3px solid red'
-// 			} else {
-// 				sitem.style.border = '2px solid #fff'
-// 			}
-// 		}))
-	
-// 	})
-// }))}
-// clickBtn23();
